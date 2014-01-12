@@ -103,21 +103,7 @@
 			width: 100%
 		}
 
-		.player-selector[data-selected] {
-		}
-		.player-selector[data-selected] .badge {
-			background: rgb(255, 190, 0);
-			color: #444;
-		}
 
-		.list-group-item {
-			padding: 0;
-		}
-
-		.player-selector-name {
-			display: inline-block;
-			padding: 10px 15px;
-		}
 
 		.badge {
 			display: inline-block;
@@ -129,6 +115,26 @@
 			background: #ddd;
 			color: #444;
 		}
+
+
+		.player-selector[data-selected] {
+			background: #F68428;
+			color: #fff;
+		}
+		.player-selector[data-selected] .badge {
+			background: #0068B3;
+			color: #fff;
+		}
+
+		.list-group-item {
+			padding: 0;
+		}
+
+		.player-selector-name {
+			display: inline-block;
+			padding: 10px 15px;
+		}
+
 		#team_a .badge {
 			border-left:1px solid rgba(0,0,0,0.3);
 		}
@@ -394,7 +400,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="list-group-item player-selector">
+							<li class="list-group-item player-selector" data-selected>
 								<div class="row">
 									<div class="col-sm-10">
 										<span class="player-selector-name">Player one</span>
