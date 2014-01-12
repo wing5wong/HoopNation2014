@@ -65,42 +65,63 @@
 			background: #fff;
 			color: #444;
 		}
+		.button.red {
+			background: #f04833;
+			color: #fff;
+		}
 
 		.toggle:checked + label, a.button:active {
-			_box-shadow: inset 0 -2px 0 rgba(0,0,0,0.3);
-			box-shadow: inset 0 2px 0 rgba(0,0,0,0.3), inset 0 -1px 0 rgba(0,0,0,0.3)
+			box-shadow: inset 0 -2px 0 rgba(0,0,0,0.3);
+			_box-shadow: inset 0 2px 0 rgba(0,0,0,0.3), inset 0 -1px 0 rgba(0,0,0,0.3)
 		}
 		a.button:active,
 		.toggle:checked + label{
 			top: 3px;
-			padding-bottom: 7px;
+			_padding-bottom: 7px;
+			_padding-top: 13px;
 		}
 
 
-		input[type="radio"].toggle,
-		input[type="checkbox"].toggle  {
+		.toggle
+		, .player-toggle{
 			display: none;
 		}
 
-		input[type="radio"].toggle + label,
-		input[type="checkbox"].toggle + label {
+		.toggle + label{
 			transition: all 0.15s;
 		}
 
-		input[type="radio"].toggle:checked + label,
-		input[type="checkbox"].toggle:checked + label {
+		.toggle:checked + label{
 			/* Do something special with the selected state */
 			color: #444;
 		}
-		input[type="radio"].toggle:not(:checked) + label,
-		input[type="checkbox"].toggle:not(:checked) + label {
+		.toggle:not(:checked) + label{
 			/* Do something special with the unselected state */
 			background: #ddd;
 			color: #444;
 		}
 
-		input[type="radio"].toggle + label, input[type="checkbox"].toggle + label {
+		.toggle + label
+		,.player-toggle + label {
 			width: 100%
+		}
+		.player-toggle + label {
+			border-radius: 4px;
+			font-weight: normal;
+			overflow: hidden;
+		}
+		.player-toggle + label .badge {
+			font-weight: normal;
+		}
+
+		.player-toggle:checked + label {
+			background: #fff;
+			box-shadow: 0 0 1px 1px rgb(0, 189, 103);
+		}
+
+		.player-toggle:checked + label .badge {
+			background: rgb(0, 189, 103);
+			color: #fff;
 		}
 
 
@@ -149,6 +170,19 @@
 		.progress {
 			background-color: #ddd;
 		}
+
+
+		.player-selector .player-toggle + label {
+			padding: 0;
+		}
+		.player-selector .player-toggle:not(:checked) + label {
+			background: #fff;
+		}
+
+		.player-selector .player-toggle:checked + label {
+			padding: 0;
+		}
+
 		.player-selector .progress {
 			margin-bottom: 0;
 			border-top-left-radius: 0;
@@ -176,6 +210,15 @@
 			border-color: rgb(0, 189, 103);
 		}
 
+		.no-gutter > div[class*="col-"] {
+			padding: 0;
+		}
+
+		.no-gutter > div[class*="col-"] > *{
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
 	</style>
 </head>
 <body>
@@ -183,7 +226,7 @@
 
 		<div class="row">
 			<div class="col-sm-12">
-				<h1 class="text-center"><span class="t-title-hoop">Hoop</span> <span class="t-title-nation">Nation</span></h1>
+				<h1 class="text-center"><span class="t-title-hoop">Basket</span> <span class="t-title-nation">Ball</span></h1>
 				<hr>
 			</div>
 		</div>
@@ -224,9 +267,40 @@
 
 				<div class="row">
 					<div class="col-sm-12">
-						<ul class="list-group">
-							<li class="list-group-item player-selector">
+						<div class="player-selector">
+							<input type="radio" class="player-toggle" name="selected_player" id="selected_player_1">
+							<label for="selected_player_1">
+								<div class="row no-gutter">
+									<div class="col-sm-10">
+										<span class="player-selector-name">Player one</span>
+									</div>
+									<div class="col-sm-2">
+										<span class="badge badge-primary"> #1</span>
+									</div>
+								</div>
 								<div class="row">
+									<div class="col-sm-12">
+										<div class="progress">
+											<div class="progress-bar progress-bar-info" style="width: 20%">
+												<span class="">1</span>
+											</div>
+											<div class="progress-bar progress-bar-primary" style="width: 20%">
+												<span class="">1</span>
+											</div>
+											<div class="progress-bar progress-bar-success" style="width: 20%">
+												<span class="">1</span>
+											</div>
+											<div class="progress-bar progress-bar-warning" style="width: 20%">
+												<span class="">1</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</label>
+
+							<input type="radio" class="player-toggle" name="selected_player" id="selected_player_2">
+							<label for="selected_player_2">
+								<div class="row no-gutter">
 									<div class="col-sm-10">
 										<span class="player-selector-name">Player one</span>
 									</div>
@@ -240,33 +314,52 @@
 											<div class="progress-bar progress-bar-info" style="width: 20%">
 												<span class="">1</span>
 											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
-											</div>
 										</div>
 									</div>
 								</div>
-							</li>
-							<li class="list-group-item player-selector">
-								<div class="row">
+							</label>
+
+							<input type="radio" class="player-toggle" name="selected_player" id="selected_player_3">
+							<label for="selected_player_3">
+								<div class="row no-gutter">
 									<div class="col-sm-10">
 										<span class="player-selector-name">Player one</span>
 									</div>
 									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
+										<span class="badge badge-primary"> #3</span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="progress">
+											<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-primary" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-success" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-warning" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-danger" style="width: 20%">
+													<span class="">1</span>
+												</div>
+										</div>
+									</div>
+								</div>
+							</label>
+
+							<input type="radio" class="player-toggle" name="selected_player" id="selected_player_4">
+							<label for="selected_player_4">
+								<div class="row no-gutter">
+									<div class="col-sm-10">
+										<span class="player-selector-name">Player one</span>
+									</div>
+									<div class="col-sm-2">
+										<span class="badge badge-primary"> #4</span>
 									</div>
 								</div>
 								<div class="row">
@@ -275,577 +368,501 @@
 											<div class="progress-bar progress-bar-info" style="width: 20%">
 												<span class="">1</span>
 											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
-											</div>
 										</div>
 									</div>
 								</div>
-							</li>
-							<li class="list-group-item player-selector">
-								<div class="row">
+							</label>
+
+							<input type="radio" class="player-toggle" name="selected_player" id="selected_player_5">
+							<label for="selected_player_5">
+								<div class="row no-gutter">
 									<div class="col-sm-10">
 										<span class="player-selector-name">Player one</span>
 									</div>
 									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
+										<span class="badge badge-primary">#5</span></div>
 									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="progress">
-											<div class="progress-bar progress-bar-info" style="width: 20%">
-												<span class="">1</span>
-											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-primary" style="width: 20%">
+													<span class="">1</span>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</li>
-							<li class="list-group-item player-selector">
-								<div class="row">
-									<div class="col-sm-10">
-										<span class="player-selector-name">Player one</span>
+								</label>
+
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_6">
+								<label for="selected_player_6">
+									<div class="row no-gutter">
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #6</span>
+										</div>
 									</div>
-									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="progress">
-											<div class="progress-bar progress-bar-info" style="width: 20%">
-												<span class="">1</span>
-											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-primary" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-success" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-warning" style="width: 20%">
+													<span class="">1</span>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</li>
-							<li class="list-group-item player-selector">
-								<div class="row">
-									<div class="col-sm-10">
-										<span class="player-selector-name">Player one</span>
+								</label>
+
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_7">
+								<label for="selected_player_7">
+									<div class="row no-gutter">
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #7</span>
+										</div>
 									</div>
-									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="progress">
-											<div class="progress-bar progress-bar-info" style="width: 20%">
-												<span class="">1</span>
-											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-primary" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-success" style="width: 20%">
+													<span class="">1</span>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</li>
-							<li class="list-group-item player-selector" data-selected>
-								<div class="row">
-									<div class="col-sm-10">
-										<span class="player-selector-name">Player one</span>
+								</label>
+
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_8">
+								<label for="selected_player_8">
+									<div class="row no-gutter">
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #8</span>
+										</div>
 									</div>
-									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="progress">
-											<div class="progress-bar progress-bar-info" style="width: 20%">
-												<span class="">1</span>
-											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-primary" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-success" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-warning" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-danger" style="width: 20%">
+													<span class="">1</span>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-
-				<div class="row">
-					<div class="col-sm-12">
-						<h4>Quarter Timeout</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-3">
-						<input type="checkbox" id="team_a_timeout_one" name="toggle" checked class="toggle">
-						<label for="team_a_timeout_one">One</label>
-					</div>
-
-					<div class="col-sm-3">
-						<input type="checkbox" id="team_a_timeout_two" name="toggle" class="toggle">
-						<label for="team_a_timeout_two">Two</label>
-					</div>
-
-					<div class="col-sm-3">
-						<input type="checkbox" id="team_a_timeout_three" name="toggle" class="toggle">
-						<label for="team_a_timeout_three">Three</label>
-					</div>
-
-					<div class="col-sm-3">
-						<input type="checkbox" id="team_a_timeout_four" name="toggle" class="toggle">
-						<label for="team_a_timeout_four">Four</label>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="col-sm-4">
-				<div class="row">
-					<div class="col-sm-12">
-						<h4>Current Quarter</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-3">
-						<input type="radio" id="toggle-one" name="toggle" checked class="toggle">
-						<label for="toggle-one">One</label>
-					</div>
-
-					<div class="col-sm-3">
-						<input type="radio" id="toggle-two" name="toggle" class="toggle">
-						<label for="toggle-two">Two</label>
-					</div>
-
-					<div class="col-sm-3">
-						<input type="radio" id="toggle-three" name="toggle" class="toggle">
-						<label for="toggle-three">Three</label>
-					</div>
-
-					<div class="col-sm-3">
-						<input type="radio" id="toggle-four" name="toggle" class="toggle">
-						<label for="toggle-four">Four</label>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="panel panel-success">
-							<div class="panel-body">
-								Status Message
+								</label>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<a class="white button">Free Throw Miss</a>
-					</div>
-					<div class="col-sm-6">
-						<a class="green button">Free Throw</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<a class="white button">Two Point Miss</a>
-					</div>
-					<div class="col-sm-6">
-						<a class="green button">Two Point</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<a class="white button">Three Point Miss</a>
-					</div>
-					<div class="col-sm-6">
-						<a class="green button">Three</a>
-					</div>
-				</div>
 
-				<div class="row">
-					<div class="col-sm-4">
-						<a class="blue button">Assist</a>
-					</div>
-					<div class="col-sm-4">
-						<a class="blue button">Steal</a>
-					</div>
-					<div class="col-sm-4">
-						<a class="blue button">Block</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-12">
-						<a class="blue button">Rebound</a>
-					</div>
-				</div>
 
-				<div class="row">
-					<div class="col-sm-4">
-						<a class="black button">Personal</a>
+					<div class="row">
+						<div class="col-sm-12">
+							<h4>Quarter Timeout</h4>
+						</div>
 					</div>
-					<div class="col-sm-4">
-						<a class="black button">Technical</a>
-					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<input type="checkbox" id="team_a_timeout_one" name="toggle" checked class="toggle">
+							<label for="team_a_timeout_one">One</label>
+						</div>
 
-					<div class="col-sm-4">
-						<a class="black button">Disqualifying</a>
-					</div>
-				</div>
+						<div class="col-sm-3">
+							<input type="checkbox" id="team_a_timeout_two" name="toggle" class="toggle">
+							<label for="team_a_timeout_two">Two</label>
+						</div>
 
-				<div class="row">
-					<div class="col-sm-12">
-						<a href="#" class="button orange">Undo</a>
-					</div>
-				</div>
-			</div>
+						<div class="col-sm-3">
+							<input type="checkbox" id="team_a_timeout_three" name="toggle" class="toggle">
+							<label for="team_a_timeout_three">Three</label>
+						</div>
 
-			<div class="col-sm-4" id="team_b">
-				<div class="row">
-					<div class="col-sm-8">
-						<h2>Team B</h2>
-					</div>
-					<div class="col-sm-4">
-						<h2>124</h2>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-sm-12">
-						<h4>Team Fouls</h4>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="progress">
-							<div class="progress-bar progress-bar-info" style="width: 20%">
-								<span class="">1</span>
-							</div>
-
-							<div class="progress-bar progress-bar-primary" style="width: 20%">
-								<span class="">2</span>
-							</div>
-
+						<div class="col-sm-3">
+							<input type="checkbox" id="team_a_timeout_four" name="toggle" class="toggle">
+							<label for="team_a_timeout_four">Four</label>
 						</div>
 					</div>
 				</div>
 
 
-				<div class="row">
-					<div class="col-sm-12">
-						<ul class="list-group">
-							<li class="list-group-item player-selector">
-								<div class="row">
-									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
-									</div>
-									<div class="col-sm-10">
-										<span class="player-selector-name">Player one</span>
-									</div>
+				<div class="col-sm-4">
+					<div class="row">
+						<div class="col-sm-12">
+							<h4>Current Quarter</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<input type="radio" id="toggle-one" name="toggle" checked class="toggle">
+							<label for="toggle-one">One</label>
+						</div>
+
+						<div class="col-sm-3">
+							<input type="radio" id="toggle-two" name="toggle" class="toggle">
+							<label for="toggle-two">Two</label>
+						</div>
+
+						<div class="col-sm-3">
+							<input type="radio" id="toggle-three" name="toggle" class="toggle">
+							<label for="toggle-three">Three</label>
+						</div>
+
+						<div class="col-sm-3">
+							<input type="radio" id="toggle-four" name="toggle" class="toggle">
+							<label for="toggle-four">Four</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="panel panel-success">
+								<div class="panel-body">
+									Status Message
 								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="progress">
-											<div class="progress-bar progress-bar-info" style="width: 20%">
-												<span class="">1</span>
-											</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<a class="white button">Free Throw Miss</a>
+						</div>
+						<div class="col-sm-6">
+							<a class="green button">Free Throw</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<a class="white button">Two Point Miss</a>
+						</div>
+						<div class="col-sm-6">
+							<a class="green button">Two Point</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<a class="white button">Three Point Miss</a>
+						</div>
+						<div class="col-sm-6">
+							<a class="green button">Three</a>
+						</div>
+					</div>
 
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<a class="blue button">Assist</a>
+						</div>
+						<div class="col-sm-4">
+							<a class="blue button">Steal</a>
+						</div>
+						<div class="col-sm-4">
+							<a class="blue button">Block</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<a class="blue button">Rebound</a>
+						</div>
+					</div>
 
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
+					<div class="row">
+						<div class="col-sm-4">
+							<a class="black button">Personal</a>
+						</div>
+						<div class="col-sm-4">
+							<a class="black button">Technical</a>
+						</div>
 
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
+						<div class="col-sm-4">
+							<a class="black button">Disqualifying</a>
+						</div>
+					</div>
 
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="list-group-item player-selector">
-								<div class="row">
-									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
-									</div>
-									<div class="col-sm-10">
-										<span class="player-selector-name">Player one</span>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="progress">
-											<div class="progress-bar progress-bar-info" style="width: 20%">
-												<span class="">1</span>
-											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="list-group-item player-selector">
-								<div class="row">
-									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
-									</div>
-									<div class="col-sm-10">
-										<span class="player-selector-name">Player one</span>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="progress">
-											<div class="progress-bar progress-bar-info" style="width: 20%">
-												<span class="">1</span>
-											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="list-group-item player-selector">
-								<div class="row">
-									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
-									</div>
-									<div class="col-sm-10">
-										<span class="player-selector-name">Player one</span>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="progress">
-											<div class="progress-bar progress-bar-info" style="width: 20%">
-												<span class="">1</span>
-											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="list-group-item player-selector">
-								<div class="row">
-									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
-									</div>
-									<div class="col-sm-10">
-										<span class="player-selector-name">Player one</span>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="progress">
-											<div class="progress-bar progress-bar-info" style="width: 20%">
-												<span class="">1</span>
-											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="list-group-item player-selector">
-								<div class="row">
-									<div class="col-sm-2">
-										<span class="badge badge-primary"> #2</span>
-									</div>
-									<div class="col-sm-10">
-										<span class="player-selector-name">Player one</span>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="progress">
-											<div class="progress-bar progress-bar-info" style="width: 20%">
-												<span class="">1</span>
-											</div>
-
-											<div class="progress-bar progress-bar-primary" style="width: 20%">
-												<span class="">2</span>
-											</div>
-
-											<div class="progress-bar progress-bar-success" style="width: 20%">
-												<span class="">3</span>
-											</div>
-
-											<div class="progress-bar progress-bar-warning" style="width: 20%">
-												<span class="">4</span>
-											</div>
-
-											<div class="progress-bar progress-bar-danger" style="width: 20%">
-												<span class="">5</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
+					<div class="row">
+						<div class="col-sm-12">
+							<a href="#" class="button orange">Undo</a>
+						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-sm-12">
-						<h4>Quarter Timeout</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-3">
-						<input type="checkbox" id="team_b_timeout_one" name="toggle" checked class="toggle">
-						<label for="team_b_timeout_one">One</label>
+
+				<div class="col-sm-4" id="team_b">
+					<div class="row">
+						<div class="col-sm-8">
+							<h2>Team B</h2>
+						</div>
+						<div class="col-sm-4">
+							<h2>124</h2>
+						</div>
 					</div>
 
-					<div class="col-sm-3">
-						<input type="checkbox" id="team_b_timeout_two" name="toggle" class="toggle">
-						<label for="team_b_timeout_two">Two</label>
+					<div class="row">
+						<div class="col-sm-12">
+							<h4>Team Fouls</h4>
+						</div>
 					</div>
 
-					<div class="col-sm-3">
-						<input type="checkbox" id="team_b_timeout_three" name="toggle" class="toggle">
-						<label for="team_b_timeout_three">Three</label>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="progress">
+								<div class="progress-bar progress-bar-info" style="width: 20%">
+									<span class="">1</span>
+								</div>
+
+								<div class="progress-bar progress-bar-primary" style="width: 20%">
+									<span class="">2</span>
+								</div>
+
+							</div>
+						</div>
 					</div>
 
-					<div class="col-sm-3">
-						<input type="checkbox" id="team_b_timeout_four" name="toggle" class="toggle">
-						<label for="team_b_timeout_four">Four</label>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="player-selector">
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_9">
+								<label for="selected_player_9">
+									<div class="row no-gutter">
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #2</span>
+										</div>
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-primary" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-success" style="width: 20%">
+													<span class="">1</span>
+												</div>
+												<div class="progress-bar progress-bar-warning" style="width: 20%">
+													<span class="">1</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</label>
+
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_10">
+								<label for="selected_player_10">
+									<div class="row no-gutter">
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #2</span>
+										</div>
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</label>
+
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_11">
+								<label for="selected_player_11">
+									<div class="row no-gutter">
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #2</span>
+										</div>
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</label>
+
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_12">
+								<label for="selected_player_12">
+									<div class="row no-gutter">
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #2</span>
+										</div>
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</label>
+
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_13">
+								<label for="selected_player_13">
+									<div class="row no-gutter">
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #2</span>
+										</div>
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</label>
+
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_14">
+								<label for="selected_player_14">
+									<div class="row no-gutter">
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #2</span>
+										</div>
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</label>
+
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_15">
+								<label for="selected_player_15">
+									<div class="row no-gutter">
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #2</span>
+										</div>
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</label>
+
+								<input type="radio" class="player-toggle" name="selected_player" id="selected_player_16">
+								<label for="selected_player_16">
+									<div class="row no-gutter">
+										<div class="col-sm-2">
+											<span class="badge badge-primary"> #2</span>
+										</div>
+										<div class="col-sm-10">
+											<span class="player-selector-name">Player one</span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" style="width: 20%">
+													<span class="">1</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</label>
+
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<h4>Quarter Timeout</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<input type="checkbox" id="team_b_timeout_one" name="toggle" checked class="toggle">
+							<label for="team_b_timeout_one">One</label>
+						</div>
+
+						<div class="col-sm-3">
+							<input type="checkbox" id="team_b_timeout_two" name="toggle" class="toggle">
+							<label for="team_b_timeout_two">Two</label>
+						</div>
+
+						<div class="col-sm-3">
+							<input type="checkbox" id="team_b_timeout_three" name="toggle" class="toggle">
+							<label for="team_b_timeout_three">Three</label>
+						</div>
+
+						<div class="col-sm-3">
+							<input type="checkbox" id="team_b_timeout_four" name="toggle" class="toggle">
+							<label for="team_b_timeout_four">Four</label>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-</body>
-</html>
+	</body>
+	</html>
 
