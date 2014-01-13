@@ -20,15 +20,16 @@
 			color: #0068B3;
 		}
 
-		.toggle + label,a.button {
+		.toggle + label
+		, a.button {
 			display: inline-block;
 			text-decoration: none;
-			background: rgb(255, 190, 0);
-			color: #fff;
+			background: #ddd;
+			color: #444;
 			font-size: 12px;
 			font-weight: bold;
 			text-align: center;
-			padding: 10px 15px;
+			padding: 10px 0;
 			-webkit-border-radius: 5px;
 			-moz-border-radius: 5px;
 			border-radius: 5px;
@@ -51,15 +52,19 @@
 		}
 		.button.blue {
 			background: #0068B3;
+			color: #fff;
 		}
 		.button.orange {
-			background: #F68428
+			background: #F68428;
+			color: #fff;
 		}
 		.button.green {
-			background: rgb(0, 189, 103)
+			background: rgb(0, 189, 103);
+			color: #fff;
 		}
 		.button.black {
 			background: #444;
+			color: #fff;
 		}
 		.button.white {
 			background: #fff;
@@ -77,8 +82,8 @@
 		a.button:active,
 		.toggle:checked + label{
 			top: 3px;
-			_padding-bottom: 7px;
-			_padding-top: 13px;
+			padding-bottom:7px;
+			margin-bottom: 23px;
 		}
 
 
@@ -93,12 +98,11 @@
 
 		.toggle:checked + label{
 			/* Do something special with the selected state */
-			color: #444;
+			background: #F68428;
+			color: #fff;
 		}
 		.toggle:not(:checked) + label{
 			/* Do something special with the unselected state */
-			background: #ddd;
-			color: #444;
 		}
 
 		.toggle + label
@@ -116,7 +120,7 @@
 
 		.player-toggle:checked + label {
 			background: #fff;
-			box-shadow: 0 0 1px 1px rgb(0, 189, 103);
+			box-shadow: 0 -1px 0px 1px rgb(0, 189, 103);
 		}
 
 		.player-toggle:checked + label .badge {
@@ -169,6 +173,7 @@
 		}
 		.progress {
 			background-color: #ddd;
+			box-shadow: inset 0 2px rgba(0,0,0,0.3);
 		}
 
 
@@ -221,7 +226,7 @@
 
 	</style>
 </head>
-<body>
+<body ontouchstart="">
 	<div class="container">
 
 		<div class="row">
@@ -239,7 +244,7 @@
 					<div class="col-sm-8">
 						<h2>Team A</h2>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 text-right">
 						<h2>14</h2>
 					</div>
 				</div>
@@ -252,12 +257,24 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="progress">
-							<div class="progress-bar progress-bar-info" style="width: 20%">
+							<div class="progress-bar" style="width: 20%">
 								<span class="">1</span>
 							</div>
 
-							<div class="progress-bar progress-bar-primary" style="width: 20%">
+							<div class="progress-bar" style="width: 20%">
 								<span class="">2</span>
+							</div>
+
+							<div class="progress-bar" style="width: 20%">
+								<span class="">3</span>
+							</div>
+
+							<div class="progress-bar" style="width: 20%">
+								<span class="">4</span>
+							</div>
+
+							<div class="progress-bar button orange" style="width: 20%">
+								<span class="">5</span>
 							</div>
 						</div>
 					</div>
@@ -333,20 +350,20 @@
 									<div class="col-sm-12">
 										<div class="progress">
 											<div class="progress-bar progress-bar-info" style="width: 20%">
-													<span class="">1</span>
-												</div>
-												<div class="progress-bar progress-bar-primary" style="width: 20%">
-													<span class="">1</span>
-												</div>
-												<div class="progress-bar progress-bar-success" style="width: 20%">
-													<span class="">1</span>
-												</div>
-												<div class="progress-bar progress-bar-warning" style="width: 20%">
-													<span class="">1</span>
-												</div>
-												<div class="progress-bar progress-bar-danger" style="width: 20%">
-													<span class="">1</span>
-												</div>
+												<span class="">1</span>
+											</div>
+											<div class="progress-bar progress-bar-primary" style="width: 20%">
+												<span class="">1</span>
+											</div>
+											<div class="progress-bar progress-bar-success" style="width: 20%">
+												<span class="">1</span>
+											</div>
+											<div class="progress-bar progress-bar-warning" style="width: 20%">
+												<span class="">1</span>
+											</div>
+											<div class="progress-bar progress-bar-danger" style="width: 20%">
+												<span class="">1</span>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -521,7 +538,7 @@
 
 				<div class="col-sm-4">
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 text-center">
 							<h4>Current Quarter</h4>
 						</div>
 					</div>
@@ -582,6 +599,12 @@
 					</div>
 
 					<div class="row">
+						<div class="col-sm-12">
+							<a class="blue button">Rebound</a>
+						</div>
+					</div>
+
+					<div class="row">
 						<div class="col-sm-4">
 							<a class="blue button">Assist</a>
 						</div>
@@ -592,11 +615,7 @@
 							<a class="blue button">Block</a>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<a class="blue button">Rebound</a>
-						</div>
-					</div>
+
 
 					<div class="row">
 						<div class="col-sm-4">
@@ -613,23 +632,23 @@
 
 					<div class="row">
 						<div class="col-sm-12">
-							<a href="#" class="button orange">Undo</a>
+							<a href="#" class="button red">Undo</a>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-sm-4" id="team_b">
 					<div class="row">
-						<div class="col-sm-8">
-							<h2>Team B</h2>
-						</div>
 						<div class="col-sm-4">
 							<h2>124</h2>
+						</div>
+						<div class="col-sm-8 text-right">
+							<h2>Team B</h2>
 						</div>
 					</div>
 
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 text-right">
 							<h4>Team Fouls</h4>
 						</div>
 					</div>
@@ -637,12 +656,24 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="progress">
-								<div class="progress-bar progress-bar-info" style="width: 20%">
+								<div class="progress-bar" style="width: 20%">
 									<span class="">1</span>
 								</div>
 
-								<div class="progress-bar progress-bar-primary" style="width: 20%">
+								<div class="progress-bar" style="width: 20%">
 									<span class="">2</span>
+								</div>
+
+								<div class="progress-bar button orange" style="width: 20%">
+									<span class="">3</span>
+								</div>
+
+								<div class="progress-bar" style="width: 20%">
+									<span class="">4</span>
+								</div>
+
+								<div class="progress-bar" style="width: 20%">
+									<span class="">5</span>
 								</div>
 
 							</div>
@@ -834,7 +865,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-sm-12 text-right">
 							<h4>Quarter Timeout</h4>
 						</div>
 					</div>
