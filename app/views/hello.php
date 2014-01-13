@@ -225,6 +225,7 @@
 		}
 
 	</style>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
 <body ontouchstart="">
 	<div class="container">
