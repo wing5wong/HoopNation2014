@@ -1,5 +1,8 @@
 <?php
 
+use Hoopnation\Tournaments\Tournament;
+use Hoopnation\Teams\Team;
+
 class DatabaseSeeder extends Seeder {
 
 	/**
@@ -12,6 +15,10 @@ class DatabaseSeeder extends Seeder {
 		Eloquent::unguard();
 
 		// $this->call('UserTableSeeder');
+		$tournament = Tournament::create(['name'=>'test','year'=>'2014']);
+		$team = Team::create(['name'=>'test-team']);
+
+		$tournament->teams()->attach($team);
 	}
 
 }

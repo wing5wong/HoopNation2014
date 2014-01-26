@@ -11,4 +11,31 @@
 |
 */
 
+App::bind('Hoopnation\Tournaments\TournamentRepositoryInterface','Hoopnation\Tournaments\EloquentTournamentRepository');
+App::bind('Hoopnation\Players\PlayerRepositoryInterface','Hoopnation\Players\EloquentPlayerRepository');
+
+Route::get('users', function()
+{
+    echo "one";
+    return "two";
+});
+
 Route::get('/','HomeController@showWelcome');
+
+Route::group(['prefix'=>'admin'],function(){
+
+
+
+    Route::group(['prefix'=>'tournaments'], function(){
+        Route::get('/filter', 'Hoopnation\Admin\TournamentController@filter');
+        Route::get('/{id}/teams/','Hoopnation\Admin\TournamentController@getTournamentTeams');
+        Route::get('/{id}/teams/filter','Hoopnation\Admin\TournamentController@getTournamentTeamsFiltered');
+    });
+
+    Route::resource('tournaments', 'Hoopnation\Admin\TournamentController');
+
+    Route::resource('players', 'Hoopnation\Admin\PlayerController');
+    Route::resource('teams', 'Hoopnation\Admin\TeamController');
+
+});
+
