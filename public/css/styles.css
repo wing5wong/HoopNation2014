@@ -136,6 +136,9 @@
     }
 
 
+    .player-selector {
+        color: #444;
+    }
     .player-selector[data-selected] {
         background: #F68428;
         color: #fff;
@@ -371,13 +374,12 @@
 
     .chart {
         text-align: center;
-        width: 240px;
-        height: 240px;
-        line-height: 240px;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
         position: relative;
         margin: 0 auto;
-        font-weight: bold;
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .chart canvas {
@@ -422,5 +424,7 @@
     }
     .panel-stats>.panel-body{
         text-align: center;
-        font-size: 6em;
+        font-size: 2em;
+        font-weight: normal;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
     }

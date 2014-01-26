@@ -146,7 +146,7 @@
 								<div class="player-selector">
 									<input type="radio" class="player-toggle" name="selected_player" id="selected_player_1">
 									<label for="selected_player_1">
-										<div class="row no-gutter">
+										<div class="row">
 											<div class="col-sm-10">
 												<span class="player-selector-name">Player one</span>
 											</div>
@@ -176,7 +176,7 @@
 
 									<input type="radio" class="player-toggle" name="selected_player" id="selected_player_2">
 									<label for="selected_player_2">
-										<div class="row no-gutter">
+										<div class="row">
 											<div class="col-sm-10">
 												<span class="player-selector-name">Player one</span>
 											</div>
@@ -197,7 +197,7 @@
 
 									<input type="radio" class="player-toggle" name="selected_player" id="selected_player_3">
 									<label for="selected_player_3">
-										<div class="row no-gutter">
+										<div class="row">
 											<div class="col-sm-10">
 												<span class="player-selector-name">Player one</span>
 											</div>
@@ -230,7 +230,7 @@
 
 									<input type="radio" class="player-toggle" name="selected_player" id="selected_player_4">
 									<label for="selected_player_4">
-										<div class="row no-gutter">
+										<div class="row">
 											<div class="col-sm-10">
 												<span class="player-selector-name">Player one</span>
 											</div>
@@ -251,7 +251,7 @@
 
 									<input type="radio" class="player-toggle" name="selected_player" id="selected_player_5">
 									<label for="selected_player_5">
-										<div class="row no-gutter">
+										<div class="row">
 											<div class="col-sm-10">
 												<span class="player-selector-name">Player one</span>
 											</div>
@@ -274,7 +274,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_6">
 										<label for="selected_player_6">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-10">
 													<span class="player-selector-name">Player one</span>
 												</div>
@@ -304,7 +304,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_7">
 										<label for="selected_player_7">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-10">
 													<span class="player-selector-name">Player one</span>
 												</div>
@@ -331,7 +331,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_8">
 										<label for="selected_player_8">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-10">
 													<span class="player-selector-name">Player one</span>
 												</div>
@@ -364,7 +364,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_10">
 										<label for="selected_player_10">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-10">
 													<span class="player-selector-name">Player one</span>
 												</div>
@@ -397,7 +397,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_9">
 										<label for="selected_player_9">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-10">
 													<span class="player-selector-name">Player one</span>
 												</div>
@@ -544,7 +544,7 @@
 									<div class="player-selector">
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_9">
 										<label for="selected_player_9">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-2">
 													<span class="badge badge-primary"> #2</span>
 												</div>
@@ -574,7 +574,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_10">
 										<label for="selected_player_10">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-2">
 													<span class="badge badge-primary"> #2</span>
 												</div>
@@ -595,7 +595,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_11">
 										<label for="selected_player_11">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-2">
 													<span class="badge badge-primary"> #2</span>
 												</div>
@@ -616,7 +616,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_12">
 										<label for="selected_player_12">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-2">
 													<span class="badge badge-primary"> #2</span>
 												</div>
@@ -637,7 +637,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_13">
 										<label for="selected_player_13">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-2">
 													<span class="badge badge-primary"> #2</span>
 												</div>
@@ -658,7 +658,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_14">
 										<label for="selected_player_14">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-2">
 													<span class="badge badge-primary"> #2</span>
 												</div>
@@ -679,7 +679,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_15">
 										<label for="selected_player_15">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-2">
 													<span class="badge badge-primary"> #2</span>
 												</div>
@@ -700,7 +700,7 @@
 
 										<input type="radio" class="player-toggle" name="selected_player" id="selected_player_16">
 										<label for="selected_player_16">
-											<div class="row no-gutter">
+											<div class="row">
 												<div class="col-sm-2">
 													<span class="badge badge-primary"> #2</span>
 												</div>
