@@ -1,14 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="hoopnation">
 <head>
 	<meta charset="UTF-8">
 	<title>Laravel PHP Framework</title>
 	<link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
 	<link rel=stylesheet href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/styles.css">
+	<script data-require="angular.js@1.2.x" src="http://code.angularjs.org/1.2.8/angular.js" data-semver="1.2.8"></script>
+	<script src="/js/app.js"></script>
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
-<body ontouchstart="">
+<body ontouchstart="" ng-controller="MainCtrl">
 
 	<div class="sidebar">
 		<div class="logo-wrapper">

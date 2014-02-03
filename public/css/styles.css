@@ -201,13 +201,8 @@
         -webkit-background-size: 50px 50px;
         -moz-background-size: 50px 50px;
         background-size: 50px 50px;
-
-
-        background: #193143;
         color: rgba(255,255,255,0.2);
-        background-image: url('/bg-noise.png');
-
-
+        color: #555;
     }
 
 
@@ -227,18 +222,90 @@
     .progress-bar{ border-right: 1px solid rgba(0,0,0,0.4);}
     .progress-bar:last-child{ border-right:none;}
 
+
+
+
+
+
+    .header {
+        position: fixed;
+        z-index: 5;
+        height: 80px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        border-bottom: 2px solid #222;
+    }
+    .brand {
+        width: 240px;
+        height: 78px;
+        padding: 15px;
+        float: left;
+        background-color: #0068B3;
+        text-align: center;
+        border-right: 2px solid #222;
+
+        position: relative;
+    }
+    .brand a {
+        float: left;
+        color: #fff;
+        font-size: 3em;
+        line-height: 1.1;
+        font-family: 'Pathway Gothic One', sans-serif;
+        text-decoration: none;
+    }
+
     .sidebar {
         width: 240px;
         position: fixed;
         height: 100%;
         background: #193143;
+        z-index:2;
+        margin-top: 80px;
 
-        _border-right: 1px solid rgba(0,0,0,0.2)
+        _border-right: 1px solid rgba(0,0,0,0.2);
+        transition: margin .3s ease-in-out;
+        border-right: 2px solid #222;
+
+        background-color: #444;
+
     }
-
     .main {
         margin-left: 240px;
-        min-height: 100%;
+        transition: margin .3s ease-in-out;
+    }
+
+    .main>.wrapper,
+    .sidebar>.wrapper
+    {
+        padding: 80px 0 20px;
+    }
+    .logo-wrapper {
+        position: relative;
+    }
+
+    .sidebar-toggle {
+        float: left;
+        position: absolute;
+        right: -20px;
+        top: 28px;
+        border-radius: 50%;
+        border: 2px solid #222;
+        background: #2088D3;
+        transition: all .3s ease-in-out;
+    }
+
+    .hide-sidebar {
+        margin-left: -240px;
+    }
+
+    .merge-left {
+        margin-left: 0;
+    }
+
+    .hide-sidebar .sidebar-toggle {
+        right: -32px
     }
 
 
@@ -281,6 +348,10 @@
 
     .sidebar .list-group-item > .list-group .list-group-item a {
         border-left: 6px solid #FF8E2E;
+    }
+
+    .sidebar .list-group-item>a + .list-group > .list-group-item:first-child {
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,.1) inset;
     }
 
     .sidebar>.logo-wrapper {

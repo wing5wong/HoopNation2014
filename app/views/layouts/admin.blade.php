@@ -12,12 +12,62 @@
 </head>
 <body ontouchstart="">
 
-    <div class="sidebar">
-        <div class="logo-wrapper">
-            <img src="http://static.wixstatic.com/media/48e828_3b02e319629e21727558c00768f16d91.png_srz_895_180_75_22_0.50_1.20_0.00_png_srz" alt="HoopNation Logo" style="max-width:100%">
+    <div class="header">
+        <div class="brand">
+            <a href="/">
+                Hoopnation
+            </a>
+            <div class="sidebar-toggle">
+                menu
+            </div>
         </div>
+    </div>
 
+    <div class="sidebar">
         <ul class="list-group">
+            <li class="list-group-item">
+                <a href="">
+                    Admission
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="">
+                    Accomodation
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="">
+                    Draw
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="">
+                    Match Results
+                </a>
+                <ul class="list-group">
+                    <li class="list-group-item"><a>1 Match Ago</a></li>
+                    <li class="list-group-item"><a>2 Match Ago</a></li>
+                    <li class="list-group-item"><a>3 Match Ago</a></li>
+                    <li class="list-group-item"><a>All Matches</a></li>
+                </ul>
+            </li>
+            <li class="list-group-item">
+                <a href="">
+                    Live Stream
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="">
+                    Sponsors
+                </a>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="">
+                            Corporate Aims
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li class="list-group-item">
                 <a>Tournaments</a>
                 <ul class="list-group">
@@ -33,173 +83,185 @@
         </ul>
     </div>
     <div class="main">
+        <div class="wrapper">
 
 
-        <div class="container full-width">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <img src="http://static.wixstatic.com/media/48e828_3b02e319629e21727558c00768f16d91.png_srz_895_180_75_22_0.50_1.20_0.00_png_srz" alt="HoopNation Logo" style="max-width:100%;margin-bottom: 40px;">
+            <div class="container full-width">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <img src="http://static.wixstatic.com/media/48e828_3b02e319629e21727558c00768f16d91.png_srz_895_180_75_22_0.50_1.20_0.00_png_srz" alt="HoopNation Logo" style="max-width:100%;margin-bottom: 40px;">
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <div class="panel panel-default">
-                        <div class="flex-video widescreen">
-                            <iframe src="//www.youtube.com/embed/dieQrQ4qa4c" class="bordered"></iframe>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <div class="panel panel-default">
+                            <div class="flex-video widescreen">
+                                <iframe src="//www.youtube.com/embed/dieQrQ4qa4c" class="bordered"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
-        <hr>
+            <hr>
 
-        <div class="container full-width">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1>Player Profile</h1>
-                    <h2 style="color:#0F7451">Sean "Sexy" Anderson</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-sm-offset-2">
-                    <img src="http://thumb9.shutterstock.com/display_pic_with_logo/83826/155838182/stock-photo-side-portrait-of-gloomy-man-isolated-on-gray-background-with-copyspace-155838182.jpg" alt="..."  class="bordered">
-                </div>
-                <div class="col-sm-4">
-                    <div class="profile-number">
-                        14
+            <div class="container full-width">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1>Player Profile</h1>
+                        <h2 style="color:#0F7451">Sean "Sexy" Anderson</h2>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2>Stats</h2>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-2">
+                        <img src="http://thumb9.shutterstock.com/display_pic_with_logo/83826/155838182/stock-photo-side-portrait-of-gloomy-man-isolated-on-gray-background-with-copyspace-155838182.jpg" alt="..."  class="bordered">
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="profile-number">
+                            14
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-8">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Stats</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <span class="profile-number">
+                                    14
+                                </span>
+                            </div>
+                            <div class="col-sm-6">
+                             <img src="http://thumb9.shutterstock.com/display_pic_with_logo/83826/155838182/stock-photo-side-portrait-of-gloomy-man-isolated-on-gray-background-with-copyspace-155838182.jpg" alt="..."  class="bordered">
+                         </div>
+                     </div>
+
+                 </div>
+                 <div class="col-sm-4">
                     <div class="row">
 
                         <div class="col-sm-6">
-                        <span class="profile-number">
-                                14
-                            </span>
+                            <h3 style="line-height:85px; text-align: right">Two Point Avg.</h3>
                         </div>
                         <div class="col-sm-6">
-                           <img src="http://thumb9.shutterstock.com/display_pic_with_logo/83826/155838182/stock-photo-side-portrait-of-gloomy-man-isolated-on-gray-background-with-copyspace-155838182.jpg" alt="..."  class="bordered">
-                       </div>
-                   </div>
+                            <div class="chart" data-percent="25">25%</div>
+                        </div>
 
-               </div>
-               <div class="col-sm-4">
-                <div class="row">
-
-                    <div class="col-sm-6">
-                        <h3 style="line-height:85px; text-align: right">Two Point Avg.</h3>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="chart" data-percent="25">25%</div>
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <h3 style="line-height:85px; text-align: right">Three Point Avg.</h3>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="chart" data-percent="45">45%</div>
+                        </div>
+
                     </div>
+                    <div class="row">
 
-                </div>
-                <div class="row">
+                        <div class="col-sm-6">
+                            <h3 style="line-height:85px; text-align: right">Free Throw Avg.</h3>
+                        </div>
 
-                    <div class="col-sm-6">
-                        <h3 style="line-height:85px; text-align: right">Three Point Avg.</h3>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="chart" data-percent="45">45%</div>
-                    </div>
-
-                </div>
-                <div class="row">
-
-                    <div class="col-sm-6">
-                        <h3 style="line-height:85px; text-align: right">Free Throw Avg.</h3>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="chart" data-percent="96">96%</div>
+                        <div class="col-sm-6">
+                            <div class="chart" data-percent="96">96%</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="panel panel-stats">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h3>Blocks</h3>
-                                <span style="color: #446f90">5</span>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-stats">
+                        <div class="panel-body">
+                            <div class="full-width container">
+                                <div class="row">
+                                    <div class="col-3 col-sm-3">
+                                        <div class="panel-stats-stat-wrapper">
+                                            <h3>Blocks</h3>
+                                            <span style="color: #446f90">5</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-3">
+                                        <div class="panel-stats-stat-wrapper">
+                                            <h3>Steals</h3>
+                                            <span style="color: #4bab5c">5</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-3">
+                                        <div class="panel-stats-stat-wrapper">
+                                            <h3>Rebounds</h3>
+                                            <span style="color: #df6b62">5</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-sm-3">
+                                        <div class="panel-stats-stat-wrapper">
+                                            <h3>Assists</h3>
+                                            <span style="color: #dfaa62">5</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-3">
-                                <h3>Steals</h3>
-                                <span style="color: #4bab5c">5</span>
-                            </div>
-                            <div class="col-sm-3">
-                                <h3>Rebounds</h3>
-                                <span style="color: #df6b62">5</span>
-                            </div>
-                            <div class="col-sm-3">
-                                <h3>Assists</h3>
-                                <span style="color: #dfaa62">5</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3>Two Point Average</h3>
+                    <div class="chart" data-percent="25">25%</div>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Three Point Average</h3>
+                    <div class="chart" data-percent="45">45%</div>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Free Throw Average</h3>
+                    <div class="chart" data-percent="96">96%</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-stats">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h3>Blocks</h3>
+                                    <span style="color: #446f90">5</span>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h3>Steals</h3>
+                                    <span style="color: #4bab5c">5</span>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h3>Rebounds</h3>
+                                    <span style="color: #df6b62">5</span>
+                                </div>
+                                <div class="col-sm-3">
+                                    <h3>Assists</h3>
+                                    <span style="color: #dfaa62">5</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
-        <div class="row">
-            <div class="col-sm-4">
-                <h3>Two Point Average</h3>
-                <div class="chart" data-percent="25">25%</div>
-            </div>
-            <div class="col-sm-4">
-                <h3>Three Point Average</h3>
-                <div class="chart" data-percent="45">45%</div>
-            </div>
-            <div class="col-sm-4">
-                <h3>Free Throw Average</h3>
-                <div class="chart" data-percent="96">96%</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="panel panel-stats">
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h3>Blocks</h3>
-                                <span style="color: #446f90">5</span>
-                            </div>
-                            <div class="col-sm-3">
-                                <h3>Steals</h3>
-                                <span style="color: #4bab5c">5</span>
-                            </div>
-                            <div class="col-sm-3">
-                                <h3>Rebounds</h3>
-                                <span style="color: #df6b62">5</span>
-                            </div>
-                            <div class="col-sm-3">
-                                <h3>Assists</h3>
-                                <span style="color: #dfaa62">5</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <script type="text/javascript">
         $(function() {
+            var size = $('.chart').parent().height();
             $('.chart').easyPieChart({
                 trackColor  : 'rgba(255,255,255,.1)',
                 scaleColor: 'rgba(255,255,255,.1)',
@@ -214,7 +276,7 @@
                 },
                 lineCap: 'butt',
                 lineWidth: '4',
-                size: '120'
+                size: size
             });
         });
 
@@ -358,5 +420,13 @@
     </div>
 
 </div>
+
+<script>
+    $('.sidebar-toggle').click(
+        function(){
+            $('.sidebar').toggleClass('hide-sidebar');
+            $('.main').toggleClass('merge-left');
+        });
+</script>
 </body>
 </html>
